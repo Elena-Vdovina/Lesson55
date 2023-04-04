@@ -9,18 +9,18 @@ import java.io.InputStreamReader;
 // Оценить временную и пространственную сложность алгоритма.
 public class Task1MinPositivInt {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {        // O(1) - time, O(1) - space
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     System.out.print("Введите количество чисел: ");
     int n = Integer.parseInt(br.readLine());
 
     System.out.println("Введите " + n + " положительных чисел, каждое с новой строки:");
-    int result = -1;
-    int min = Integer.parseInt(br.readLine());
-    for (int i = 1; i < n; ++i) {
-      int x = Integer.parseInt(br.readLine());
-      if (x % 2 == 0) {
+    int result = -1;                                                 // O(1) - time, O(1) - space
+    int min = Integer.parseInt(br.readLine());                       // O(1) - time, O(1) - space
+    for (int i = 1; i < n; ++i) {                                    // O(n) - time, O(1) - space
+      int x = Integer.parseInt(br.readLine());                       // O(1) - time, O(1) - space
+      if (x % 2 == 0) {                                              // O(1) - time, O(1) - space
         if (x < min) {
           min = x;
           result = i;
@@ -28,9 +28,9 @@ public class Task1MinPositivInt {
       }
     }
     if (result < 0) {
-      System.out.println("Результат: " + result);
+      System.out.println("Результат: " + result);                    // O(1) - time
     } else {
-      System.out.println("Минимальное чётное число: " + min);
+      System.out.println("Минимальное чётное число: " + min);        // O(1) - time
     }
   }
 }
