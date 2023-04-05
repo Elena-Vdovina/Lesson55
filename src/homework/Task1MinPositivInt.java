@@ -20,11 +20,9 @@ public class Task1MinPositivInt {
     int min = Integer.parseInt(br.readLine());                       // O(1) - time, O(1) - space
     for (int i = 1; i < n; ++i) {                                    // O(n) - time, O(1) - space
       int x = Integer.parseInt(br.readLine());                       // O(1) - time, O(1) - space
-      if (x % 2 == 0) {                                              // O(1) - time, O(1) - space
-        if (x < min) {
-          min = x;
-          result = i;
-        }
+      if (x % 2 == 0 && x < min) {                                   // O(1) - time, O(1) - space
+        min = x;
+        result = i;
       }
     }
     if (result < 0) {
